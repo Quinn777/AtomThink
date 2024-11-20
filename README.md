@@ -45,7 +45,7 @@
 
 - **[2024-11-20]** Thank you for visiting this repository!
 
-
+---
 
 
 
@@ -70,6 +70,8 @@
 
 
 
+---
+
 
 
 ## 🖼️ Examples
@@ -92,9 +94,17 @@ Example3 of AMATH-SFT dataset
 
 
 
+---
+
+
+
 ## ⚙️ Usage
 
 Our code, model and datasets will be released soon. Stay tuned for updates!  
+
+
+
+---
 
 
 
@@ -111,6 +121,10 @@ If you find this project useful, please cite our paper:
   doi={https://doi.org/10.48550}
 }
 ```
+
+
+
+---
 
 
 

@@ -22,20 +22,22 @@
 🎉Thank you for exploring AtomThink! We warmly invite you to ⭐️ star this repository, share your feedback via issues, and contribute to the project.
 </p>
 
-## Contents
+
+
+## 📝 Contents
 
 - [News](#News)
 - [Features](#Features)
-- [Datasets](#Datasets)
+- [Examples](#Examples)
 - [Usage](#usage)
+- [Citation](#Citation)
 - [License](#license)
-- [Contact](#contact)
 
 ---
 
 
 
-## News
+## 📣 News
 
 - **[Upcoming]** Our code, model and datasets will be released soon. Stay tuned for updates!  
 
@@ -43,11 +45,13 @@
 
 - **[2024-11-20]** Thank you for visiting this repository!
 
-  
 
-## Features
 
-✨ **Key Features**  
+
+
+## 💡Features
+
+ **Key Features**  
 
 - 🧠 Introduces **GPT-o1** style reasoning via long CoT for complex multimodal mathematical tasks.
 - 🛠️ Combines a CoT annotation engine, atomic step fine-tuning, and policy search strategies to enhance reasoning.
@@ -56,9 +60,9 @@
 
 - 📈 State-of-the-art performance in multimodal mathematical reasoning tasks.
 
-  
 
-📖 **Abstract**
+
+**Abstract**
 
 > In this paper, we address the challenging task of multimodal mathematical reasoning by incorporating the ability of  “slow thinking” into multimodal large language models (MLLMs). Contrary to existing methods that rely on direct or fast thinking, our key idea is to construct long chains of thought (CoT) consisting of atomic actions in a step-by-step manner, guiding MLLMs to perform complex reasoning. To this end, we design a novel AtomThink framework composed of three key modules: (i) a CoT annotation engine that automatically generates high-quality CoT annotations to address the lack of high-quality visual mathematical data; (ii) an atomic step fine-tuning strategy that jointly optimizes an MLLM and a policy reward model (PRM) for step-wise reasoning; and (iii) four different search strategies that can be applied with the PRM to complete reasoning. Additionally, we propose AtomMATH, a large-scale multimodal dataset of long CoTs, and an atomic capability evaluation metric for mathematical tasks. Extensive experimental results show that the proposed AtomThink significantly improves the performance of baseline MLLMs, achieving approximately 50\% relative accuracy gains on MathVista and 120\% on MathVerse.
 
@@ -66,7 +70,9 @@
 
 
 
-## Examples
+
+
+## 🖼️ Examples
 
 Example1 of AMATH-SFT dataset
 
@@ -86,13 +92,13 @@ Example3 of AMATH-SFT dataset
 
 
 
-## Usage
+## ⚙️ Usage
 
-⚙️  Our code, model and datasets will be released soon. Stay tuned for updates!  
+Our code, model and datasets will be released soon. Stay tuned for updates!  
 
 
 
-## Citation
+## 📖 Citation
 
 If you find this project useful, please cite our paper:
 ```
@@ -108,9 +114,8 @@ If you find this project useful, please cite our paper:
 
 
 
-## License
+## 📄 License
 
-📄 **License**  
 This project is licensed under the [MIT License](LICENSE).  
 
 

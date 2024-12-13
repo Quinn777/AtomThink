@@ -28,7 +28,7 @@
 
 - [News](#News)
 - [Features](#Features)
-- [Case Study](#case study)
+- [Case Study](#casestudy)
 - [Dataset](#Dataset)
 - [Usage](#usage)
 - [Citation](#Citation)
@@ -41,7 +41,6 @@
 
 ## 📣 News
 
-- **[Upcoming]** Our training code will be released soon. Stay tuned for updates!  
 - **[2024-12-13]** We’ve released the AMATH-PRM dataset: [AMATH-PRM](https://huggingface.co/datasets/Quinn777/AtomMATH-PRM)!
 - **[2024-12-13]** We’ve released the AMATH-SFT dataset: [AMATH-SFT](https://huggingface.co/datasets/Quinn777/AtomMATH-SFT)!
 - **[2024-12-13]** We’ve released the pretrained weight for AtomThink-LLaVA: [AtomThink-LLaVA](https://huggingface.co/Quinn777/AtomThink-LLaVA-Llama3-8B)!
@@ -252,5 +251,11 @@ We would like to thank the following repositories for their contributions:
 - [openreasoner/openr](https://github.com/openreasoner/openr): This tool was helpful for deploying the process supervision model.
 
  
+
+
+
+---
+
+
 
 <p align="center">✨ Thank you for your interest in our work! ✨</p>

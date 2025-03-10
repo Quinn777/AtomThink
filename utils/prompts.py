@@ -9,6 +9,7 @@ HISTORICAL REASONING STEPS:
 Your task is to predict the next step of reasoning or calculation based on THE GIVEN QUESTION and HISTORICAL REASONING STEPS. Ensure your prediction is a single atomic reasoning step, which should be small and focused. If the historical reasoning steps have already reached a conclusion, there is no need to predict the next step in reasoning; simply reply with \"To sum up, the final answer is: ...\".
 """
 
+
 demo_prompt = """
 Please read the following example. Then extract the answer from the model response and type it at the end of the prompt.
 

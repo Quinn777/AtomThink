@@ -1,0 +1,30 @@
+{
+"AMATH-SFT": {
+    "file_name": "AtomMATH/AMATH-SFT.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "images": "image"
+    },
+        "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+"llava_v1_5_sample_100k": {
+    "file_name": "llava_v1_5_sample_100k.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "images": "image"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  }
+}

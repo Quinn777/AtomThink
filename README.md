@@ -1,4 +1,4 @@
-<p align="center">   <a href="https://arxiv.org/abs/2411.11930" style="text-decoration:none;">     <h1><strong>AtomThink: A Slow Thinking Framework for Multimodal Mathematical Task</strong></h1>   </a> </p>
+<p align="center">   <a href="https://arxiv.org/abs/2411.11930" style="text-decoration:none;">     <h1><strong>Can Atomic Step Decomposition Enhance the Self-structured Reasoning of Multimodal Large Models?</strong></h1>   </a> </p>
 
 <p align="center">
   <img src="figures/logo.jpg" alt="Project Logo" width="400">
@@ -40,15 +40,8 @@
 
 
 ## 📣 News
-
-- **[2024-12-13]** We’ve released the AMATH-PRM dataset: [AMATH-PRM](https://huggingface.co/datasets/Quinn777/AtomMATH-PRM)!
-- **[2024-12-13]** We’ve released the AMATH-SFT dataset: [AMATH-SFT](https://huggingface.co/datasets/Quinn777/AtomMATH-SFT)!
-- **[2024-12-13]** We’ve released the pretrained weight for AtomThink-LLaVA: [AtomThink-LLaVA](https://huggingface.co/Quinn777/AtomThink-LLaVA-Llama3-8B)!
-- **[2024-12-13]** We’ve released the pretrained weight for AtomThink-Emova: [AtomThink-Emova](https://huggingface.co/Quinn777/AtomThink-EMOVA-8B)!
-- **[2024-12-13]** We’ve released the pretrained weight for AtomThink-PRM: [AtomThinkPRM](https://huggingface.co/Quinn777/AtomThinkPRM)!
-- **[2024-12-13]** We’ve released the code for inferencing!
-- **[2024-11-20]** The paper *AtomThink: A Slow Thinking Framework for Multimodal Mathematical Task* is now available on [arXiv](https://arxiv.org/abs/2411.11930)!
-- **[2024-11-20]** Thank you for visiting this repository!
+- **[2025-03-11]** The paper *Can Atomic Step Decomposition Enhance the Self-structured Reasoning of Multimodal Large Models?* is now available on [arXiv](https://arxiv.org/abs/2411.11930)!
+- **[2025-03-11]** Thank you for visiting this repository!
 
 ---
 
@@ -71,106 +64,21 @@
 
 **Abstract**
 
-> In this paper, we address the challenging task of multimodal mathematical reasoning by incorporating the ability of  “slow thinking” into multimodal large language models (MLLMs). Contrary to existing methods that rely on direct or fast thinking, our key idea is to construct long chains of thought (CoT) consisting of atomic actions in a step-by-step manner, guiding MLLMs to perform complex reasoning. To this end, we design a novel AtomThink framework composed of three key modules: (i) a CoT annotation engine that automatically generates high-quality CoT annotations to address the lack of high-quality visual mathematical data; (ii) an atomic step fine-tuning strategy that jointly optimizes an MLLM and a policy reward model (PRM) for step-wise reasoning; and (iii) four different search strategies that can be applied with the PRM to complete reasoning. Additionally, we propose AtomMATH, a large-scale multimodal dataset of long CoTs, and an atomic capability evaluation metric for mathematical tasks. Extensive experimental results show that the proposed AtomThink significantly improves the performance of baseline MLLMs, achieving approximately 50\% relative accuracy gains on MathVista and 120\% on MathVerse.
+>  In this paper, we address the challenging task of multimodal mathematical reasoning by incorporating the ability of "slow thinking" into multimodal large language models (MLLMs). Our core idea is that different levels of reasoning abilities can be combined dynamically to tackle questions with different complexity. To this end, we propose a paradigm of Self-structured Chain of Thought (SCoT), which is composed of minimal semantic atomic steps. Different from existing methods that rely on structured templates or free-form paradigms, our method can not only generate cognitive CoT structures for various complex tasks but also mitigates the phenomenon of overthinking. To introduce structured reasoning capabilities into visual understanding models, we further design a novel AtomThink framework with four key modules, including (i) a data engine to generate high-quality multimodal reasoning paths; (ii) a supervised fine-tuning process with serialized inference data;  (iii) a policy-guided multi-turn inference method; and (iv) an atomic capability metric to evaluate the single step utilization rate. We conduct extensive experiments to show that the proposed AtomThink significantly improves the performance of baseline MLLMs, achieving more than 10\% average accuracy gains on MathVista and MathVerse. Compared to state-of-the-art structured CoT approaches, our method not only achieves higher accuracy but also improves data utilization by 5 times and boosts inference efficiency by 85.3\%.
 
 [Read the full paper](https://arxiv.org/abs/your-paper-id)
 
+<p align="center">   <img src="figures/fig1.png" alt="" width="800"> </p>
+Comparison with structured and unstructured reasoning models. We are capable of autonomously generating dynamic structures and lengths based on the type of problem. For text-dominant questions as shown on the left, we bypass image caption and directly extracted information from the question stem. For the low-difficulty problem on the right, we use fewer tokens compared to o1-like model.
 
-
----
-
-
-
-## 🚀 Case Study
-
-We present the atomic CoT outputs generated by LLaVA-Llama3-8B and EMOVA-8B models trained with AtomThink. Compared to the original models, we are able to produce a structured thinking process similar to OpenAI-o1.
-
-Example1:
-
-<p align="center">   <img src="figures/case_emova1.png" alt="Description of Image" width="800"> </p>
-
-
-
-Example2:
-
-<p align="center">   <img src="figures/case_emova2.png" alt="Description of Image" width="800"> </p>
-
-
-
-Example3:
-
-<p align="center">   <img src="figures/case_llava1.png" alt="Description of Image" width="800"> </p>
-
-
-
-Example4:
-
-<p align="center">   <img src="figures/case_llava2.png" alt="Description of Image" width="800"> </p>
-
-
+<p align="center">   <img src="figures/fig2.png" alt="" width="800"> </p>
+Comparison of the average response length in AtomThink-LlamaV over benchmarks with different complexity. (a) As tasks become more challenging, the model proactively utilizes more tokens. (b) The proportion of longer CoT containing a greater number of atomic steps increases in outputs. A higher level signifies increased difficulty. The performance decline margin of AtomThink modes are more narrow (-20.4\% v.s. -30.7\% in LLaVA1.5, -30\% v.s. -43.0\% in LlamaV).
 
 ---
-
-
-
-## 🖼️ Dataset
-
-#### Details
-
-The details of our AtomMATH dataset are shown in the table below. AMATH-SFT is used for instruction fine-tuning, while AMATH-PRM is used to train the policy reward model for language process supervision.
-
-| **Source** | **Meta Samples** | **AMATH-SFT** | **AMATH-PRM** |
-| ---------- | ---------------- | ------------- | ------------- |
-| CLEVR      | 1929             | 11.2k         | 34.4k         |
-| Geometry3K | 1201             | 11.1k         | 15.6k         |
-| MAVIS      | 3654             | 17.7k         | 31.4k         |
-| TabMWP     | 2463             | 15.7k         | 25.7k         |
-| GeomVerse  | 1347             | 9.9k          | 17.0k         |
-| MathV360K  | 10157            | 53.5k         | 33.6k         |
-| MMMU       | 76               | 0.6k          | 1.3k          |
-| GeoQA+     | 2082             | 19.5k         | 0             |
-| IconQA     | 3199             | 18.1k         | 0             |
-| **Total**  | **26108**        | **157k**      | **159k**      |
-
-
-
-#### Examples
-
-Example1 of AMATH-SFT dataset
-
-<p align="center">   <img src="figures/asft1.png" alt="Description of Image" width="800"> </p>
-
-
-
-Example2 of AMATH-SFT dataset
-
-<p align="center">   <img src="figures/asft2.png" alt="Description of Image" width="800"> </p>
-
-
-
-Example1 of AMATH-PRM dataset
-
-<p align="center">   <img src="figures/aprm1.png" alt="Example1 of AMATH-PRM dataset" width="800"> </p>
-
-
-
-Example2 of AMATH-PRM dataset
-
-<p align="center">   <img src="figures/aprm2.png" alt="Example1 of AMATH-PRM dataset" width="800"> </p>
-
----
-
 
 
 ## ⚙️ Usage
 
-#### Model
-
-You can download our model from  [AtomThink-LLaVA](https://huggingface.co/Quinn777/AtomThink-LLaVA-Llama3-8B), [AtomThink-Emova](https://huggingface.co/Quinn777/AtomThink-EMOVA-8B) and [AtomThinkPRM](https://huggingface.co/Quinn777/AtomThinkPRM).
-
-#### Dataset
-
-You can download our training data from  [AMATH-SFT](https://huggingface.co/datasets/Quinn777/AtomMATH-SFT) and [AMATH-PRM](https://huggingface.co/datasets/Quinn777/AtomMATH-PRM).
 
 #### Quick Start
 
@@ -186,35 +94,55 @@ Set up your OpenAI API key:
 os.environ['OPENAI_API_KEY'] = 'YOUR KEY'
 ```
 
-Modify the `eval_configs/MathVerse.py` file to set the config:
-
+Start training:
 ```
-"mmcv_config": "./model_configs/atomthink-llava-llama3-8b.py",
-"prm_model": "YOUR_PATH/AtomThinkPRM",
-"image_dir": ".MathVerse/images",
-"question_file": ".MathVerse/testmini.json",
-"answers_file": ".results/",
-"extraction_file": ".results/",
-"score_file": ".results/",
-"log": ".results/logs"
+cd Atomthink
+config=configs/train_full/llama32-11b-vision/llava100k_amath126k_clean_epoch1_2e6.yaml
+torchrun --nproc_per_node 8 --master_addr $master_addr --nnodes $nnode --node_rank $node_rank --master_port $port src/train.py $config
 ```
 
-Modify the `model_configs/atomthink-llava-llama3-8b.py` file to set the model path:
+Start evaluating:
 
 ```
-training_args = dict(
-    output_dir="YOUR_PRETRAINED_MODEL_DIR/atomthink-llava-llama3-8b",)
+python src/llamafactory/evaluation/run_evaluation_parallel.py \
+--node_rank $node_rank \
+--total_gpus $total_gpus \
+--nproc_per_node 8 \
+--temperature 0.0 \
+--tasks_per_gpu 1 \
+--config "$config" \
+--task 'MathVision' \
+--prompt 'slow' \
+--method 'slow' \
+--atomthink_beam_search_num 2 \
+--candidate_num 3 \
+--max_sampling_count 300
 ```
 
-Perform inference:
 
-```
-CUDA_VISIBLE_DEVICE=0,1 python evaluation.py --config eval_configs/MathVerse.py
-```
+---
+
+
+
+## 🚀 Case Study
+
+We present the atomic samples in AMATH dataset. 
+
+Example1:
+
+<p align="center">   <img src="figures/case1.png" alt="Description of Image" width="800"> </p>
+
+
+
+Example2:
+
+<p align="center">   <img src="figures/case2.png" alt="Description of Image" width="800"> </p>
 
 
 
 ---
+
+
 
 
 
@@ -247,12 +175,11 @@ This project is licensed under the [MIT License](LICENSE).
 ## 🙏 Acknowledgement
 
 We would like to thank the following repositories for their contributions:
+- [hiyouga/LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory): This library was used for training.
 - [bklieger-groq/g1](https://github.com/bklieger-groq/g1): This library was used for data processing.
 - [openreasoner/openr](https://github.com/openreasoner/openr): This tool was helpful for deploying the process supervision model.
 
  
-
-
 
 ---
 

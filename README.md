@@ -3,7 +3,6 @@
 <p align="center">
   <img src="figures/logo.jpg" alt="Project Logo" width="400">
 </p>
-
 <p align="center">
   <a href="https://github.com/Quinn777/AtomThink/stargazers">
     <img src="https://img.shields.io/github/stars/Quinn777/AtomThink?style=flat-square" alt="GitHub stars">
@@ -11,12 +10,13 @@
   <a href="https://github.com/Quinn777/AtomThink/issues">
     <img src="https://img.shields.io/github/issues/Quinn777/AtomThink?style=flat-square" alt="GitHub issues">
   </a>
-  <a href="https://arxiv.org/abs/2411.11930">
+  <a href="https://arxiv.org/abs/2503.06252">
     <img src="https://img.shields.io/badge/arXiv-2411.11930-red?style=flat-square&logo=arXiv&logoColor=white" alt="arXiv">
   </a>
   <a href="https://github.com/Quinn777/AtomThink/blob/main/LICENSE">
     <img src="https://img.shields.io/github/license/Quinn777/AtomThink?style=flat-square" 
 </p>
+
 
 <p align="center">
 🎉Thank you for exploring AtomThink! We warmly invite you to ⭐️ star this repository, share your feedback via issues, and contribute to the project.
@@ -28,11 +28,9 @@
 
 - [News](#News)
 - [Features](#Features)
-- [Case Study](#casestudy)
-- [Dataset](#Dataset)
 - [Usage](#usage)
+- [Case Study](#casestudy)
 - [Citation](#Citation)
-- [License](#license)
 - [Acknowledgement](#acknowledgement)
 
 ---
@@ -40,7 +38,7 @@
 
 
 ## 📣 News
-- **[2025-03-11]** The paper *Can Atomic Step Decomposition Enhance the Self-structured Reasoning of Multimodal Large Models?* is now available on [arXiv](https://arxiv.org/abs/2411.11930)!
+- **[2025-03-11]** The paper *Can Atomic Step Decomposition Enhance the Self-structured Reasoning of Multimodal Large Models?* is now available on [arXiv](https://arxiv.org/abs/2503.06252)!
 - **[2025-03-11]** Thank you for visiting this repository!
 
 ---
@@ -51,14 +49,10 @@
 
  **Key Features**  
 
-- 🧠 Introduces **GPT-o1** style reasoning via long CoT for complex multimodal mathematical tasks.
-- 🛠️ Combines a CoT annotation engine, atomic step fine-tuning, and policy search strategies to enhance reasoning.
-- 📊 A capability evaluation metric to perform a quality assessment of each reasoning steps.
-- ⚡ Test-time scaling law in MLLM.
-
-- 📈 State-of-the-art performance in multimodal mathematical reasoning tasks.
-
-
+- 🧠 Introduces **GPT-o1** style reasoning via long CoT for complex multimodal  tasks.
+- 🛠️ Combines a CoT annotation engine, fine-tuning, policy search and evaluation metric to enhance reasoning.
+- ⚡ Better data efficiency, inference speed and performance than LLaVA-CoT.
+- 📈 State-of-the-art performance in multimodal reasoning tasks.
 
 <p align="center">   <img src="figures/framework.png" alt="Description of Image" width="800"> </p>
 
@@ -150,6 +144,14 @@ Example2:
 
 If you find this project useful, please cite our paper:
 ```
+@article{xiang2025canatomic,
+  title={Can Atomic Step Decomposition Enhance the Self-structured Reasoning of Multimodal Large Models?
+},
+  author={Kun Xiang},
+  journal={arXiv preprint arXiv:2503.06252},
+  year={2025},
+  doi={https://doi.org/10.48550}
+}
 @article{xiang2024atomthink,
   title={AtomThink: A Slow Thinking Framework for Multimodal Mathematical Reasoning
 },

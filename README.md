@@ -67,7 +67,6 @@
 
 >  In this paper, we address the challenging task of multimodal mathematical reasoning by incorporating the ability of "slow thinking" into multimodal large language models (MLLMs). Our core idea is that different levels of reasoning abilities can be combined dynamically to tackle questions with different complexity. To this end, we propose a paradigm of Self-structured Chain of Thought (SCoT), which is composed of minimal semantic atomic steps. Different from existing methods that rely on structured templates or free-form paradigms, our method can not only generate cognitive CoT structures for various complex tasks but also mitigates the phenomenon of overthinking. To introduce structured reasoning capabilities into visual understanding models, we further design a novel AtomThink framework with four key modules, including (i) a data engine to generate high-quality multimodal reasoning paths; (ii) a supervised fine-tuning process with serialized inference data;  (iii) a policy-guided multi-turn inference method; and (iv) an atomic capability metric to evaluate the single step utilization rate. We conduct extensive experiments to show that the proposed AtomThink significantly improves the performance of baseline MLLMs, achieving more than 10\% average accuracy gains on MathVista and MathVerse. Compared to state-of-the-art structured CoT approaches, our method not only achieves higher accuracy but also improves data utilization by 5 times and boosts inference efficiency by 85.3\%.
 
-[Read the full paper](https://arxiv.org/abs/your-paper-id)
 
 <p align="center">   <img src="figures/fig1.png" alt="" width="800"> </p>
 Comparison with structured and unstructured reasoning models. We are capable of autonomously generating dynamic structures and lengths based on the type of problem. For text-dominant questions as shown on the left, we bypass image caption and directly extracted information from the question stem. For the low-difficulty problem on the right, we use fewer tokens compared to o1-like model.
@@ -151,13 +150,17 @@ Example2:
 
 If you find this project useful, please cite our paper:
 ```
+@article{xiang2025can,
+  title={Can Atomic Step Decomposition Enhance the Self-structured Reasoning of Multimodal Large Models?},
+  author={Xiang, Kun and Liu, Zhili and Jiang, Zihao and Nie, Yunshuang and Cai, Kaixin and Yin, Yiyang and Huang, Runhui and Fan, Haoxiang and Li, Hanhui and Huang, Weiran and others},
+  journal={arXiv preprint arXiv:2503.06252},
+  year={2025}
+}
 @article{xiang2024atomthink,
-  title={AtomThink: A Slow Thinking Framework for Multimodal Mathematical Reasoning
-},
-  author={Kun Xiang},
+  title={AtomThink: A Slow Thinking Framework for Multimodal Mathematical Reasoning},
+  author={Xiang, Kun and Liu, Zhili and Jiang, Zihao and Nie, Yunshuang and Huang, Runhui and Fan, Haoxiang and Li, Hanhui and Huang, Weiran and Zeng, Yihan and Han, Jianhua and others},
   journal={arXiv preprint arXiv:2411.11930},
-  year={2024},
-  doi={https://doi.org/10.48550}
+  year={2024}
 }
 ```
 

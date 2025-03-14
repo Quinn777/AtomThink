@@ -2,7 +2,6 @@
 ## 📣 News
 - **[2024-12-13]** We have re-released AtomThink, please move to [AtomThink](https://github.com/Quinn777/AtomThink).
 - **[2024-12-13]** We’ve released the AMATH-PRM dataset: [AMATH-PRM](https://huggingface.co/datasets/Quinn777/AtomMATH-PRM)!
-- **[2024-12-13]** We’ve released the AMATH-SFT dataset: [AMATH-SFT](https://huggingface.co/datasets/Quinn777/AtomMATH-SFT)!
 - **[2024-12-13]** We’ve released the pretrained weight for AtomThink-LLaVA: [AtomThink-LLaVA](https://huggingface.co/Quinn777/AtomThink-LLaVA-Llama3-8B)!
 - **[2024-12-13]** We’ve released the pretrained weight for AtomThink-Emova: [AtomThink-Emova](https://huggingface.co/Quinn777/AtomThink-EMOVA-8B)!
 - **[2024-12-13]** We’ve released the pretrained weight for AtomThink-PRM: [AtomThinkPRM](https://huggingface.co/Quinn777/AtomThinkPRM)!

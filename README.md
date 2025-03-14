@@ -40,6 +40,8 @@
 
 
 ## 📣 News
+- **[2025-03-14]** The model *AtomThink-Llama-3.2-Vision-11B* is now available on [AtomThink-Llama-3.2-Vision-11B](https://huggingface.co/Quinn777/AtomThink-Llama-3.2-Vision-11B)!
+- **[2025-03-14]** The model *AtomThink-LLaVA1.5-7B* is now available on [AtomThink-LLaVA1.5-7B](https://huggingface.co/Quinn777/AtomThink-LLaVA1.5-7B)!
 - **[2025-03-14]** The dataset *AMATH-SFT* is now available on [AMATH-SFT](https://huggingface.co/datasets/Quinn777/AMATH-SFT)!
 - **[2025-03-11]** The paper *Can Atomic Step Decomposition Enhance the Self-structured Reasoning of Multimodal Large Models?* is now available on [arXiv](https://arxiv.org/abs/2411.11930)!
 - **[2025-03-11]** Thank you for visiting this repository!

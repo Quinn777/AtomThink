@@ -1,4 +1,4 @@
-<p align="center">   <a href="https://arxiv.org/abs/2411.11930" style="text-decoration:none;">     <h1><strong>Can Atomic Step Decomposition Enhance the Self-structured Reasoning of Multimodal Large Models?</strong></h1>   </a> </p>
+<p align="center">   <a href="https://arxiv.org/abs/2411.11930" style="text-decoration:none;">     <h1><strong>AtomThink: Multimodal Slow Thinking with Atomic Step Reasoning</strong></h1>   </a> </p>
 
 <p align="center">
   <img src="figures/logo.jpg" alt="Project Logo" width="400">
@@ -43,7 +43,7 @@
 - **[2025-03-14]** The model *AtomThink-Llama-3.2-Vision-11B* is now available on [AtomThink-Llama-3.2-Vision-11B](https://huggingface.co/Quinn777/AtomThink-Llama-3.2-Vision-11B)!
 - **[2025-03-14]** The model *AtomThink-LLaVA1.5-7B* is now available on [AtomThink-LLaVA1.5-7B](https://huggingface.co/Quinn777/AtomThink-LLaVA1.5-7B)!
 - **[2025-03-14]** The dataset *AMATH-SFT* is now available on [AMATH-SFT](https://huggingface.co/datasets/Quinn777/AMATH-SFT)!
-- **[2025-03-11]** The paper *Can Atomic Step Decomposition Enhance the Self-structured Reasoning of Multimodal Large Models?* is now available on [arXiv](https://arxiv.org/abs/2411.11930)!
+- **[2025-03-11]** The paper *AtomThink: Multimodal Slow Thinking with Atomic Step Reasoning* is now available on [arXiv](https://arxiv.org/abs/2411.11930)!
 - **[2025-03-11]** Thank you for visiting this repository!
 
 ---
@@ -67,7 +67,7 @@
 
 **Abstract**
 
->  In this paper, we address the challenging task of multimodal mathematical reasoning by incorporating the ability of "slow thinking" into multimodal large language models (MLLMs). Our core idea is that different levels of reasoning abilities can be combined dynamically to tackle questions with different complexity. To this end, we propose a paradigm of Self-structured Chain of Thought (SCoT), which is composed of minimal semantic atomic steps. Different from existing methods that rely on structured templates or free-form paradigms, our method can not only generate cognitive CoT structures for various complex tasks but also mitigates the phenomenon of overthinking. To introduce structured reasoning capabilities into visual understanding models, we further design a novel AtomThink framework with four key modules, including (i) a data engine to generate high-quality multimodal reasoning paths; (ii) a supervised fine-tuning process with serialized inference data;  (iii) a policy-guided multi-turn inference method; and (iv) an atomic capability metric to evaluate the single step utilization rate. We conduct extensive experiments to show that the proposed AtomThink significantly improves the performance of baseline MLLMs, achieving more than 10\% average accuracy gains on MathVista and MathVerse. Compared to state-of-the-art structured CoT approaches, our method not only achieves higher accuracy but also improves data utilization by 5 times and boosts inference efficiency by 85.3\%.
+> In this paper, we address the challenging task of multimodal mathematical reasoning by incorporating the notion of ``slow thinking'' into multimodal large language models (MLLMs). Our core idea is that models can learn to adaptively use different levels of reasoning to tackle questions of different complexity. We propose a novel paradigm of Self-structured Chain of Thought (SCoT), which comprises of minimal semantic atomic steps. Different from existing methods that rely on structured templates or free-form paradigms, our method can not only generate cognitive CoT structures for various complex tasks but also mitigates the phenomena of overthinking for easier tasks. To introduce structured reasoning into visual cognition, we further design a novel AtomThink framework with four key modules, including (i) a data engine to generate high-quality multimodal reasoning paths; (ii) a supervised fine-tuning (SFT) process with serialized inference data;  (iii) a policy-guided multi-turn inference method; and (iv) an atomic capability metric to evaluate the single step utilization rate. We conduct extensive experiments to show that the proposed AtomThink significantly improves the performance of baseline MLLMs, achieving more than 10\% average accuracy gains on MathVista and MathVerse. Compared to state-of-the-art structured CoT approaches, our method not only achieves higher accuracy but also improves data utilization by 5 times and boosts inference efficiency by 85.3\%.
 
 
 <p align="center">   <img src="figures/fig1.png" alt="" width="800"> </p>
